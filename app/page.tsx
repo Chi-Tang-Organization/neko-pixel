@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -7,6 +9,10 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <span className="text-xl font-bold">NekoPixel</span>
+            </div>
+            <div className="hidden md:flex items-center space-x-6">
+              <Link href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors">Home</Link>
+              <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors">Service</Link>
             </div>
           </div>
         </div>
@@ -22,9 +28,9 @@ export default function Home() {
             software solutions tailored to your unique needs.
           </p>
           <button className="bg-black text-white dark:bg-white dark:text-black px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
-            <a href="mailto:purofle@gmail.com">
+            <Link href="mailto:purofle@gmail.com">
             Contact Sales
-            </a>
+            </Link>
           </button>
         </div>
       
