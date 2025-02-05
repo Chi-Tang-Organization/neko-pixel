@@ -22,7 +22,7 @@ export default function Home() {
       <div className="pt-16">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#4285f4] mb-4">Innovative Software Solutions</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-[length:200%_auto] bg-gradient-to-r hover:bg-[position:100%_0] from-indigo-500 via-purple-500 to-pink-500 bg-clip-text inline-block mb-4 transition-[background-position] duration-500">Innovative Software Solutions</h1>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
             NekoPixel Tech LTD: Transforming your ideas into powerful, scalable
             software solutions tailored to your unique needs.
