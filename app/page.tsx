@@ -11,7 +11,7 @@ export default function Home() {
               <span className="text-xl font-bold">NekoPixel</span>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <Link href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors">Home</Link>
+              <Link href="/" className="text-gray-900 dark:text-gray-100 transition-colors">Home</Link>
               <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors">Service</Link>
             </div>
           </div>
