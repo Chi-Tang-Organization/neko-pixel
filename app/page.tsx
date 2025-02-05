@@ -41,7 +41,7 @@ export default function Home() {
               const centerX = rect.width / 2;
               const centerY = rect.height / 2;
               
-              const rotateX = (y - centerY) / 20;
+              const rotateX = (y - centerY) / 2;
               const rotateY = (centerX - x) / 20;
               
               element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
