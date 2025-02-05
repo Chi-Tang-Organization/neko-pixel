@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 
 export default function Home() {
@@ -21,8 +23,35 @@ export default function Home() {
       {/* Add padding-top to account for fixed navbar */}
       <div className="pt-16">
         {/* Hero Section */}
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-[length:200%_auto] bg-gradient-to-r hover:bg-[position:100%_0] from-indigo-500 via-purple-500 to-pink-500 bg-clip-text inline-block mb-4 transition-[background-position] duration-500">Innovative Software Solutions</h1>
+        <div className="container mx-auto px-4 py-16 text-center perspective-near">
+          <h1 
+            id="hero-text"
+            className="
+            text-4xl md:text-5xl font-bold text-transparent
+            bg-[length:200%_auto] bg-gradient-to-r hover:bg-[position:100%_0] from-indigo-500 via-purple-500 to-pink-500 bg-clip-text
+            inline-block mb-4
+            [transition:background-position_600ms,transform_100ms]
+            transform-gpu"
+            onMouseMove={(e) => {
+              const element = e.currentTarget;
+              const rect = element.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              
+              const centerX = rect.width / 2;
+              const centerY = rect.height / 2;
+              
+              const rotateX = (y - centerY) / 20;
+              const rotateY = (centerX - x) / 20;
+              
+              element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            }}
+          >
+            Innovative Software Solutions
+          </h1>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
             NekoPixel Tech LTD: Transforming your ideas into powerful, scalable
             software solutions tailored to your unique needs.
